@@ -3,7 +3,6 @@ module Test.Main where
 import Prelude
 import Test.Examples
 import Test.MySolutions
-import Test.NoPeeking.Solutions  -- Note to reader: Delete this line
 import Data.Array (sort)
 import Data.Maybe (Maybe(..))
 import Data.Path (filename, root)
@@ -19,7 +18,6 @@ main =
   runTest do
     runChapterExamples
     {-  Move this block comment starting point to enable more tests
-Note to reader: Delete this line to expand comment block -}
     suite "Exercise Group - Recursion" do
       test "Exercise - isEven" do
         assert "0 is even"
@@ -167,7 +165,6 @@ Note to reader: Delete this line to expand comment block -}
           $ Assert.equal (Nothing)
           $ whereIs "lss"
 
-{- Note to reader: Delete this line to expand comment block
 -}
 runChapterExamples :: TestSuite
 runChapterExamples =
