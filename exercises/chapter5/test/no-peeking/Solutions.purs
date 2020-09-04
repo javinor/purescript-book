@@ -68,6 +68,7 @@ centerShape (Line (Point s) (Point e)) =
   deltaX = (e.x + s.x) / 2.0
   deltaY = (e.y + s.y) / 2.0
 centerShape (Text loc text) = Text origin text
+centerShape c@(DataP.Clipped _ _ _ _) = c
 
 scaleShape :: Number -> Shape -> Shape
 scaleShape i (Circle c r) = Circle c (r * i)
