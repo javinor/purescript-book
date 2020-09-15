@@ -33,6 +33,7 @@ renderValidationErrors xs =
   in
     [ D.div
         { className: "alert alert-danger row"
+        , key: "errors"
         , children: [ D.ul_ (map renderError xs) ]
         }
     ]
@@ -105,6 +106,7 @@ mkAddressBookApp =
               renderValidationErrors errors
                 <> [ D.div
                       { className: "row"
+                      , key: "form"
                       , children:
                           [ D.form_
                               $ [ D.h3_ [ D.text "Basic Information" ]
